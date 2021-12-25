@@ -32,6 +32,11 @@ app.post('/cookie', (req, res)=>{
     res.send('<h1>Posted!</h1>');
 });
 
+app.post('/log', (req, res)=>{
+    console.log(req.body.log);
+    res.sendStatus(200);
+});
+
 app.listen(port, ()=>{
     console.log("Running on " + port);
 })
