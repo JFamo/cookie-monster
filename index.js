@@ -37,6 +37,13 @@ app.post('/log', (req, res)=>{
     res.sendStatus(200);
 });
 
+app.post('/checkbody',(req,res)=>{
+	const resp = req.body['g-recaptcha-response']
+	res.type('txt')
+	if(!resp) return res.send('??');
+    return res.send('ok');
+});
+
 app.listen(port, ()=>{
     console.log("Running on " + port);
 })
