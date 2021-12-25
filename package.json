@@ -1,6 +1,6 @@
 {
   "name": "cookie-monster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A website to grab cookies from visitors and write them to a flatfile",
   "main": "index.js",
   "dependencies": {

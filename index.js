@@ -1,6 +1,7 @@
+'use strict';
+
 //modules
 var fs = require('fs');
-var http = require('http');
 
 // setup express
 const express = require('express');
