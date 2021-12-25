@@ -1,0 +1,24 @@
+{
+  "name": "cookie-monster",
+  "version": "1.0.0",
+  "description": "A website to grab cookies from visitors and write them to a flatfile",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFamo/cookie-monster.git"
+  },
+  "author": "Joshua Famous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JFamo/cookie-monster/issues"
+  },
+  "homepage": "https://github.com/JFamo/cookie-monster#readme"
+}
