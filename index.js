@@ -40,8 +40,10 @@ app.post('/log', (req, res)=>{
 });
 
 app.post('/checkbody',(req,res)=>{
-	const resp = req.body['g-recaptcha-response']
-	res.type('txt')
+	const resp = req.body['g-recaptcha-response'];
+    res.set('Access-Control-Allow-Origin','http://65.21.255.24:5000');
+    res.set('Access-Control-Allow-Credentials', true);
+	res.type('txt');
 	if(!resp) return res.send('??');
     return res.send('ok');
 });
