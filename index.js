@@ -28,7 +28,7 @@ app.get('/', (req, res)=>{
     <h1>Cookie Monster</h1>
     <h4>Joshua Famous</h4>
     <p>This website grabs cookies and sends them to a flat file. For ASIS CTF Finals 2021.</p>
-    <form action="http://localhost:` + port + `/cookie" method="POST" id="cookieForm">
+    <form action="https://cookie-monster-jfam.herokuapp.com/cookie" method="POST" id="cookieForm">
         <input type="text" name="cookie" placeholder="xyz" id="cookieInput">
     </form>
 
