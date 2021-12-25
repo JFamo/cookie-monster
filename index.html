@@ -30,7 +30,8 @@
                     headers: {
                     'Content-Type': 'application/json'
                     //'Content-Type': 'application/x-www-form-urlencoded'
-                    }
+                    },
+                    credentials: 'include'
                 });
                 data = await res.text();
                 console.log("Got data " + JSON.stringify(data));
