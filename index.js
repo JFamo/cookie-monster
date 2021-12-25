@@ -49,10 +49,10 @@ app.post('/checkbody',(req,res)=>{
 });
 
 app.get('/data',(req,res)=>{
-    const params = {"g-recaptcha-response":"03AGdBq261ht3M5qK2OfbdcI0VReAF-TJrlLXbS19Ey3gt914UlgDEf1pCk2DJUfFKxOIW5bt5poSzmPG-Yt5rKs1UO0LWmZ-BYhauPsY-RlJmEmfMsXKku1H4R1n96nkE2Ii_MmsQy3azux8H7YfCVTmNE4ocUgtFGUG7InG4hRoT0MyTMx41eIE-fxdyIqqpeoJ0Q2sFTET1-GYUZ9UmWNDg9DaxpdesuPFRkmbOps0lRy5BeDH20zMBbUBbhGJxSjNHKF6jjsNEaOwUUyOljD7W26UXNFE72bmmhdaQot2_hQS7LcHahp_gf0EGkEKaexvJ2OaAqAo2xGgGxHkbTkBTXDIWxMaHSIBOT3R1I2CWu93xJDFw5gZVkccUa1uSKa2GULzxHBcMCfZVlrfKvnw67XGzwqiLr147YLzupV4LA1BZW4uu_I3d2T0Bp5ijh28dO1zEAQ5t"};
+    const params = "03AGdBq261ht3M5qK2OfbdcI0VReAF-TJrlLXbS19Ey3gt914UlgDEf1pCk2DJUfFKxOIW5bt5poSzmPG-Yt5rKs1UO0LWmZ-BYhauPsY-RlJmEmfMsXKku1H4R1n96nkE2Ii_MmsQy3azux8H7YfCVTmNE4ocUgtFGUG7InG4hRoT0MyTMx41eIE-fxdyIqqpeoJ0Q2sFTET1-GYUZ9UmWNDg9DaxpdesuPFRkmbOps0lRy5BeDH20zMBbUBbhGJxSjNHKF6jjsNEaOwUUyOljD7W26UXNFE72bmmhdaQot2_hQS7LcHahp_gf0EGkEKaexvJ2OaAqAo2xGgGxHkbTkBTXDIWxMaHSIBOT3R1I2CWu93xJDFw5gZVkccUa1uSKa2GULzxHBcMCfZVlrfKvnw67XGzwqiLr147YLzupV4LA1BZW4uu_I3d2T0Bp5ijh28dO1zEAQ5t";
     res.set('Access-Control-Allow-Origin','http://65.21.255.24:5000');
     res.set('Access-Control-Allow-Credentials', true);
-    res.send(JSON.stringify(params));
+    res.send(params);
 });
 
 app.listen(port, ()=>{
